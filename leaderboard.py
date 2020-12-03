@@ -8,7 +8,6 @@ Created on Mon Nov 23 09:03:48 2020
 
 import streamlit as st
 import pandas as pd 
-from emoji import UNICODE_EMOJI
 import pandas as pd 
 import datetime
 import altair as alt
@@ -17,9 +16,6 @@ import numpy as np
 import requests as req
 import json 
 
-
-def is_emoji(s):
-    return s in UNICODE_EMOJI
 
 #get data in --> Need to make a database and an api call 
 @st.cache

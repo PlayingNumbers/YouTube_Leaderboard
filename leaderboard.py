@@ -11,7 +11,6 @@ import pandas as pd
 import pandas as pd 
 import datetime
 import altair as alt
-from streamlit_vega_lite import vega_lite_component, altair_component
 import numpy as np
 import requests as req
 import json 

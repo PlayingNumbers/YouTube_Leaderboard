@@ -59,7 +59,7 @@ if option == 'Engagement Points':
     like_winners = pd.pivot_table(df_dates, index='Author_Name', values=['Like_Count','Reply_Count'], aggfunc='sum').reset_index()
     comment_leaders = pd.pivot_table(df_dates, index='Author_Name', values='Comments', aggfunc='count').reset_index()
     eps = pd.merge(comment_leaders, like_winners, on = 'Author_Name')
-    eps['Engagement Points'] = eps.Like_Count + eps.Comments + eps.Reply_Count*.5
+    eps['Engagement Points'] = eps.Like_Count + eps.Comments + eps.Reply_Count
     eps = eps.sort_values('Engagement Points', ascending =False)
     b_chart = alt.Chart(eps.head(20)).mark_bar().encode(
         x=alt.X('Engagement Points:Q'),
